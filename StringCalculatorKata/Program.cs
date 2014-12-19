@@ -35,11 +35,21 @@ namespace StringCalculatorKata
            
             if (numbers != null && numbers != "")
             {
-                string[] vals = numbers.Split(',');
-
+                char[] splitters = {',', '\n'};
+                string[] vals = numbers.Split(splitters);
+                
                 foreach (string val in vals)
                 {
+                    if (val == "")
+                    {
+                        throw new ProgramException("Wrong input passed.");
+                    }
+
                     int curval = int.Parse(val);
+                    if (curval < 0)
+                    {
+                        throw new ProgramException("Negatives not allowed.");
+                    }
                     result += curval;
                 }
             }

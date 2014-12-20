@@ -97,7 +97,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void TestWrongInput()
+        public void TestAddWrongInput()
         {
             // arrange
             String input = "1,\n";
@@ -106,8 +106,8 @@ namespace UnitTests
             try
             {
                 StringCalculatorKata.Program program = new StringCalculatorKata.Program();
-                int result = program.Add(input);
-                Assert.Fail();
+                program.Add(input);
+                Assert.Fail("An exception should have been thrown before.");
             }
 
             catch (StringCalculatorKata.ProgramException e)
@@ -127,8 +127,8 @@ namespace UnitTests
             try
             {
                 StringCalculatorKata.Program program = new StringCalculatorKata.Program();
-                int result = program.Add(input);
-                Assert.Fail();
+                program.Add(input);
+                Assert.Fail("An exception should have been thrown before.");
             }
             catch (StringCalculatorKata.ProgramException e)
             {
@@ -148,8 +148,8 @@ namespace UnitTests
             try
             {
                 StringCalculatorKata.Program program = new StringCalculatorKata.Program();
-                int result = program.Add(input);
-                Assert.Fail();
+                program.Add(input);
+                Assert.Fail("An exception should have been thrown before.");
             }
             catch (StringCalculatorKata.ProgramException e)
             {

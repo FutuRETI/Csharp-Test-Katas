@@ -33,24 +33,40 @@ namespace StringCalculatorKata
         {
             int result = 0;
            
-            if (numbers != null && numbers != "")
+            if (numbers == null || numbers == "")
             {
-                char[] splitters = {',', '\n'};
-                string[] vals = numbers.Split(splitters);
-                
-                foreach (string val in vals)
-                {
-                    if (val == "")
-                    {
-                        throw new ProgramException("Wrong input passed.");
-                    }
+                return result;
+            }
 
+            char[] splitters = {',', '\n'};
+            string[] separatorsplit = numbers.Split('\n');
+            if (separatorsplit[0].Length == 1 && separatorsplit[0].IndexOfAny("0123456789".ToCharArray()) == -1)
+            {
+                splitters = separatorsplit[0].ToCharArray();
+                numbers = numbers.Substring(2);
+            }
+
+            string[] vals = numbers.Split(splitters);
+                
+            foreach (string val in vals)
+            {
+                if (val == "")
+                {
+                    throw new ProgramException("Wrong input passed.");
+                }
+
+                try
+                {
                     int curval = int.Parse(val);
                     if (curval < 0)
                     {
                         throw new ProgramException("Negatives not allowed.");
                     }
                     result += curval;
+                }
+                catch (FormatException e)
+                {
+                    throw new ProgramException("Wrong input passed.", e);
                 }
             }
 

@@ -158,5 +158,20 @@ namespace UnitTests
                 Assert.AreEqual("Negatives not allowed.", e.Message);
             }
         }
+
+        [TestMethod]
+        public void TestAddCustomDelimeter()
+        {
+            // arrange
+            String input = ";\n1;2";
+            int expectedResult = 3;
+
+            // act
+            StringCalculatorKata.Program program = new StringCalculatorKata.Program();
+            int result = program.Add(input);
+
+            // assert
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }

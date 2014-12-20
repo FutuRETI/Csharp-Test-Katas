@@ -1,6 +1,0 @@
-c:\users\andrea\documents\visual studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\bin\Debug\StringCalculatorKata.exe.config
-c:\users\andrea\documents\visual studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\bin\Debug\StringCalculatorKata.exe
-c:\users\andrea\documents\visual studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\bin\Debug\StringCalculatorKata.pdb
-c:\users\andrea\documents\visual studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\obj\Debug\StringCalculatorKata.csprojResolveAssemblyReference.cache
-c:\users\andrea\documents\visual studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\obj\Debug\StringCalculatorKata.exe
-c:\users\andrea\documents\visual studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\obj\Debug\StringCalculatorKata.pdb

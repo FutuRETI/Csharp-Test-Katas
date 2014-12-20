@@ -1,7 +1,0 @@
-C:\Users\Andrea\Documents\Visual Studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\UnitTests\bin\Debug\UnitTests.dll
-C:\Users\Andrea\Documents\Visual Studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\UnitTests\bin\Debug\UnitTests.pdb
-C:\Users\Andrea\Documents\Visual Studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\UnitTests\bin\Debug\StringCalculatorKata.exe
-C:\Users\Andrea\Documents\Visual Studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\UnitTests\bin\Debug\StringCalculatorKata.pdb
-C:\Users\Andrea\Documents\Visual Studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
-C:\Users\Andrea\Documents\Visual Studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\UnitTests\obj\Debug\UnitTests.dll
-C:\Users\Andrea\Documents\Visual Studio 2012\Projects\Csharp Test Katas\StringCalculatorKata\UnitTests\obj\Debug\UnitTests.pdb

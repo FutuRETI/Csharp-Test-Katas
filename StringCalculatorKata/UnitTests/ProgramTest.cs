@@ -118,6 +118,27 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void TestAddNonNumeric()
+        {
+            // arrange
+            String input = "1,aaa";
+
+            // act
+            try
+            {
+                StringCalculatorKata.Program program = new StringCalculatorKata.Program();
+                program.Add(input);
+                Assert.Fail("An exception should have been thrown before.");
+            }
+
+            catch (StringCalculatorKata.ProgramException e)
+            {
+                // assert
+                Assert.IsNotNull(e);
+            }
+        }
+
+        [TestMethod]
         public void TestAddFirstNegative()
         {
             // arrange

@@ -10,3 +10,4 @@ TestResults
 *.coveragexml
 packages
 .sonar
+packages.config

@@ -31,8 +31,9 @@ namespace StringCalculatorKata
     {
         public int Add(string numbers)
         {
+            string strnumbers = numbers;
             int result = 0;
-           
+
             if (numbers == null || numbers == "")
             {
                 return result;
@@ -43,10 +44,10 @@ namespace StringCalculatorKata
             if (separatorsplit[0].Length == 1 && separatorsplit[0].IndexOfAny("0123456789".ToCharArray()) == -1)
             {
                 splitters = separatorsplit[0].ToCharArray();
-                numbers = numbers.Substring(2);
+                strnumbers = numbers.Substring(2);
             }
 
-            string[] vals = numbers.Split(splitters);
+            string[] vals = strnumbers.Split(splitters);
                 
             foreach (string val in vals)
             {

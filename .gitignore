@@ -6,3 +6,7 @@ obj
 _ReSharper.*
 *.swp
 TestResults
+*.coverage
+*.coveragexml
+packages
+.sonar

@@ -89,16 +89,16 @@ namespace StringCalculatorKata
         {
             int result = 0;
 
-		    if (numbers == null || numbers == "")
+            if (numbers == null || numbers == "")
             {
-			    return result;
-		    }
+                return result;
+            }
 
-		    String[] vals = GetVals(numbers);
+            String[] vals = GetVals(numbers);
 
-		    foreach (String val in vals) {
-			    result += GetIntVal(val);
-		    }
+            foreach (String val in vals) {
+                result += GetIntVal(val);
+            }
 
             return result;
         }

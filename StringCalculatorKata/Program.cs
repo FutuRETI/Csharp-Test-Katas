@@ -88,7 +88,7 @@ namespace StringCalculatorKata
         public int Add(string numbers)
         {
             int result = 0;
-		
+
 		    if (numbers == null || numbers == "")
             {
 			    return result;

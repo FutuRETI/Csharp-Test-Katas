@@ -29,47 +29,76 @@ namespace StringCalculatorKata
 {
     public class Program
     {
-        public int Add(string numbers)
+        private bool IsFirstLineSeparator(string numbers)
         {
-            string strnumbers = numbers;
-            int result = 0;
-
-            if (numbers == null || numbers == "")
-            {
-                return result;
-            }
-
-            char[] splitters = {',', '\n'};
             string[] separatorsplit = numbers.Split('\n');
-            if (separatorsplit[0].Length == 1 && separatorsplit[0].IndexOfAny("0123456789".ToCharArray()) == -1)
+            return (separatorsplit[0].Length == 1 && separatorsplit[0].IndexOfAny("0123456789".ToCharArray()) == -1);
+        }
+
+        private char[] GetSplitters(string numbers, bool isFirstLineSeparator)
+        {
+            char[] splitters = { ',', '\n' };
+            string[] separatorsplit = numbers.Split('\n');
+            
+            if (isFirstLineSeparator)
             {
                 splitters = separatorsplit[0].ToCharArray();
-                strnumbers = numbers.Substring(2);
             }
 
-            string[] vals = strnumbers.Split(splitters);
-                
-            foreach (string val in vals)
+            return splitters;
+        }
+
+        private string[] GetVals(string numbers)
+        {
+            bool isFirstLineSeparator = IsFirstLineSeparator(numbers);
+            char[] splitters = GetSplitters(numbers, isFirstLineSeparator);
+            
+            if (isFirstLineSeparator)
             {
-                if (val == "")
-                {
-                    throw new ProgramException("Wrong input passed.");
-                }
-
-                try
-                {
-                    int curval = int.Parse(val);
-                    if (curval < 0)
-                    {
-                        throw new ProgramException("Negatives not allowed.");
-                    }
-                    result += curval;
-                }
-                catch (FormatException e)
-                {
-                    throw new ProgramException("Wrong input passed.", e);
-                }
+                return numbers.Substring(2).Split(splitters);
             }
+            else
+            {
+                return numbers.Split(splitters);
+            }
+        }
+
+        private int GetIntVal(string val)
+        {
+            if (val == "")
+            {
+                throw new ProgramException("Wrong input passed.");
+            }
+
+            try
+            {
+                int curval = int.Parse(val);
+                if (curval < 0)
+                {
+                    throw new ProgramException("Negatives not allowed.");
+                }
+                return curval;
+            }
+            catch (FormatException e)
+            {
+                throw new ProgramException("Wrong input passed.", e);
+            }
+	    }
+
+        public int Add(string numbers)
+        {
+            int result = 0;
+		
+		    if (numbers == null || numbers == "")
+            {
+			    return result;
+		    }
+
+		    String[] vals = GetVals(numbers);
+
+		    foreach (String val in vals) {
+			    result += GetIntVal(val);
+		    }
 
             return result;
         }

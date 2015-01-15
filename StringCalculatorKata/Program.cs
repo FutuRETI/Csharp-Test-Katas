@@ -83,7 +83,7 @@ namespace StringCalculatorKata
             {
                 throw new ProgramException("Wrong input passed.", e);
             }
-	    }
+        }
 
         public int Add(string numbers)
         {

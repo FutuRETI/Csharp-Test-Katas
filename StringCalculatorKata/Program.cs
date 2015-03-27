@@ -94,9 +94,9 @@ namespace StringCalculatorKata
                 return result;
             }
 
-            String[] vals = GetVals(numbers);
+            string[] vals = GetVals(numbers);
 
-            foreach (String val in vals) {
+            foreach (string val in vals) {
                 result += GetIntVal(val);
             }
 

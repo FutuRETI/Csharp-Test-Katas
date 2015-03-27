@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace StringCalculatorKata
 {
+    [SerializableAttribute] 
     public class ProgramException : Exception
-    {
+    {   
         public ProgramException()
         {
         }

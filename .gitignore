@@ -5,10 +5,12 @@ bin
 obj
 _ReSharper.*
 *.swp
-TestResults
+TestResult*
 *.coverage
 *.coveragexml
 packages
 .sonar
 packages.config
 test-results
+coverage.xml
+results.xml
